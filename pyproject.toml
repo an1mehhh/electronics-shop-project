@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "electronics-shop-project"
+name = "test"
 version = "0.1.0"
 description = ""
-authors = ["kirillskyeng <kirill.netreba@skyeng.ru>"]
+authors = ["an1meh <adolf.ddd@mail.ru>"]
 readme = "README.md"
-packages = [{include = "electronics_shop_project"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+pytest = "^7.4.0"
 
 
 [build-system]
