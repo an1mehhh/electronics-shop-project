@@ -42,8 +42,10 @@ class Item:
 
     @name.setter
     def name(self, value):
-        self.__name = [x[:7] + '...' if len(x) > 10 else x for x in value]
-        self.__name = value
+        if len(value) > 10:
+            self.__name = value[:7] + '...'
+        else:
+            self.__name = value
 
     @classmethod
     def instantiate_from_csv(cls):
@@ -62,3 +64,9 @@ class Item:
     @staticmethod
     def string_to_number(string):
         return int(float(string))
+
+    def __repr__(self):
+        return f"{self.__class__.__name__}('{self.__name}', {self.price}, {self.quantity})"
+
+    def __str__(self):
+        return f"{self.__name}"
